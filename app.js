@@ -5,6 +5,15 @@ var cookieParser = require('cookie-parser');
 var lessMiddleware = require('less-middleware');
 var logger = require('morgan');
 
+//=============================================
+function initApp(db){
+
+
+
+
+
+
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
@@ -40,4 +49,10 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-module.exports = app;
+
+//==============================
+return app;
+
+}//init app
+
+module.exports = initApp;
